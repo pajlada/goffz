@@ -19,11 +19,9 @@ type EmoteData struct {
 		ID          int    `json:"id"`
 		Name        string `json:"name"`
 	} `json:"owner"`
-	Public bool `json:"public"`
-	Urls   struct {
-		Num1 string `json:"1"`
-	} `json:"urls"`
-	Width int `json:"width"`
+	Public bool              `json:"public"`
+	Urls   map[string]string `json:"urls"`
+	Width  int               `json:"width"`
 }
 
 // EmoteResponse json to struct
