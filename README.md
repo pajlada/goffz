@@ -1,6 +1,7 @@
 # goffz
 
 Uses [jsonapi](https://github.com/dankeroni/jsonapi) by [dankeroni](https://github.com/dankeroni) for all net code.
+
 Inspired by [gotwitch](https://github.com/dankeroni/gotwitch)
 
 ## Example for getting a Room object
@@ -19,7 +20,7 @@ func main() {
     api.GetRoom("pajlada", onSuccess, onHTTPError, onInternalError)
 }
 
-func onSuccess(room gotwitch.RoomResponse) {
+func onSuccess(room goffz.RoomResponse) {
     fmt.Printf("%+v\n", room)
 }
 
