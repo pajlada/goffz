@@ -14,16 +14,14 @@ type RoomResponse struct {
 		ModeratorBadge interface{} `json:"moderator_badge"`
 		Set            int         `json:"set"`
 	} `json:"room"`
-	Sets struct {
-		Num1 struct {
-			Type        int         `json:"_type"`
-			CSS         interface{} `json:"css"`
-			Description interface{} `json:"description"`
-			Emoticons   []EmoteData `json:"emoticons"`
-			Icon        interface{} `json:"icon"`
-			ID          int         `json:"id"`
-			Title       string      `json:"title"`
-		} `json:"1"`
+	Sets map[string]struct {
+		Type        int         `json:"_type"`
+		CSS         interface{} `json:"css"`
+		Description interface{} `json:"description"`
+		Emoticons   []EmoteData `json:"emoticons"`
+		Icon        interface{} `json:"icon"`
+		ID          int         `json:"id"`
+		Title       string      `json:"title"`
 	} `json:"sets"`
 }
 
